@@ -16,28 +16,37 @@
   
 ## 步驟
 1. 克隆專案
-   git clone https://github.com/ChenkailiuG/music_verilog_transformer.git
-   cd ./music_verilog_transformer/m2M/
- 
-2. 安裝依賴
-   pip install -r requirements.txt
-
-3. 安裝 FFmpeg：
-    * Windows：從 FFmpeg 官網 下載並加入系統環境變數。
-    * macOS：
+```bash
+git clone https://github.com/ChenkailiuG/music_verilog_transformer.git
+cd ./music_verilog_transformer/m2M/
+```
+3. 安裝依賴
+```bash
+pip install -r requirements.txt
+```
+5. 安裝 FFmpeg：
+  * Windows：從 FFmpeg 官網 下載並加入系統環境變數。
+  * macOS：
+```bash
 brew install ffmpeg
-    * Linux：
+```
+  * Linux：
+```bash
 sudo apt-get install ffmpeg
+```
 
 ## 使用方法
 ### 使用 CLI 將 MP3 或 M4A 檔案轉換為 MIDI 檔案：
+```bash
 python scripts/cli.py --input examples/input/test.mp3 --output examples/output/output.mid
+```
 ### 參數說明
 * --input：輸入音訊檔案的路徑（支援 .mp3 和 .m4a）。
 * --output：輸出 MIDI 檔案的路徑（必須以 .mid 結尾）。
 生成的 output.mid 可在 MIDI 編輯器（如 GarageBand、Reaper）中開啟。
 
 ## 專案結構
+```
 m2M/
 ├── src/                     # 核心程式碼
 │   ├── __init__.py          # 模組初始化
@@ -49,7 +58,10 @@ m2M/
 ├── examples/                # 輸入輸出資料夾
 │   ├── input/               # 輸入音訊檔案
 │   └── output/              # 生成的 MIDI 檔案
+├── scripts/                 # 執行腳本
+│   └── cli.py               
 └── requirements.txt         # 依賴清單
+``` 
 
 ## 限制
 * 目前僅支援單聲道音訊（例如鋼琴獨奏、人聲旋律）。複雜音訊（如多樂器混音）需額外處理。
