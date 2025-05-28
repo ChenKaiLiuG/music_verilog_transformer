@@ -1,8 +1,3 @@
-# src/audio_loader.py
-"""
-Module for loading and preprocessing audio files (MP3, M4A) for MIDI conversion.
-"""
-
 import os
 from pathlib import Path
 import numpy as np
