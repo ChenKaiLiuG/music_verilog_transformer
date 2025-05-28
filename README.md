@@ -19,7 +19,4 @@ music_verilog_transformer/
 ├── examples/                # 示例音訊檔案與結果  
 │   ├── input/               # 測試用 MP3/M4A 檔案  
 │   └── output/              # 生成的 MIDI 檔案  
-├── scripts/                 # 執行腳本  
-│   ├── cli.py               # 命令列介面  
-│   └── gui.py               # 圖形使用者介面（使用 tkinter 或 PyQt）  
 └── requirements.txt         # 依賴庫清單  
